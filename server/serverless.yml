@@ -1,0 +1,26 @@
+plugins: # List of plugins of use on application
+    - serverless-offline # Get your serverless configuration and run the server local
+    - serverless-plugin-typescript-express
+
+# Project name on the infrastructure created
+service: node-typescript-serverless
+
+provider:
+  name: aws # Provider name, where the infrastructure has be created
+  runtime: nodejs8.10 # The node version where the lambda functions going to run
+  stage: dev # Control the environment of application
+  region: us-east-1 # Default region where the lambda functions running
+
+functions: # The array with definitions of lambda functions of the your application 
+  getHeroes: # Lambda function name
+    handler: src/server.handler # The function name mapped of the application
+    events: # Array of events that call the function
+      - http: # Type of event, the http event selected, it's event is a endpoint mapped on api gateway
+          path: heroes
+          method: get
+  getHeroById:
+    handler: src/server.handler
+    events:
+      - http:
+          path: heroes/{id}
+          method: get

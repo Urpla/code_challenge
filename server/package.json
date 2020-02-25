@@ -1,0 +1,28 @@
+{
+  "name": "code-challenge-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "build": "node_modules/.bin/tsc -pretty -p .",
+    "start": "serverless offline start",
+    "crawler": "ts-node ./src/data/scripts/getHeroes.ts"
+  },
+  "author": "Urpla",
+  "devDependencies": {
+    "@types/node": "^11.10.4",
+    "puppeteer": "^2.1.1",
+    "serverless": "^1.64.0",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.2.2"
+  },
+  "dependencies": {
+    "@types/express": "^4.16.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "reflect-metadata": "^0.1.13",
+    "serverless-http": "^1.8.0",
+    "serverless-offline": "^3.31.3",
+    "serverless-plugin-typescript-express": "^1.0.7"
+  }
+}
