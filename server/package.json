@@ -23,6 +23,7 @@
     "reflect-metadata": "^0.1.13",
     "serverless-http": "^1.8.0",
     "serverless-offline": "^3.31.3",
-    "serverless-plugin-typescript-express": "^1.0.7"
+    "serverless-plugin-typescript-express": "^1.0.7",
+    "uuid": "^8.3.2"
   }
 }
